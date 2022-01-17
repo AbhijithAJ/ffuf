@@ -78,6 +78,9 @@ Assuming that the default virtualhost response size is 4242 bytes, we can filter
 ffuf -w /path/to/vhost/wordlist -u https://target -H "Host: FUZZ" -fs 4242
 ```
 
+*TIP: When you are using long word list, you can get an intimation to your telegram mobile application once the fuzzing is done*
+``` ffuf -w /path/to/wordlist -u https://target/FUZZ ; python3 -m intimations telegram -t 'FUZZING' 'Fuzzing on the target is complete.'  ``` 
+
 ### GET parameter fuzzing
 
 GET parameter name fuzzing is very similar to directory discovery, and works by defining the `FUZZ` keyword as a part of the URL. This also assumes an response size of 4242 bytes for invalid GET parameter name.
