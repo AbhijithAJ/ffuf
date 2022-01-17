@@ -80,7 +80,7 @@ ffuf -w /path/to/vhost/wordlist -u https://target -H "Host: FUZZ" -fs 4242
 
 *TIP: When you are using long word list, you can get an intimation to your telegram mobile application once the fuzzing is done*
 
-``` ffuf -w /path/to/wordlist -u https://target/FUZZ ; python3 -m intimations telegram -t 'FUZZING' 'Fuzzing on the target is complete.'  ``` 
+```ffuf -w /path/to/wordlist_100000.txt -u https://target/FUZZ ; python3 -m intimations telegram --title 'FUZZING' --message 'Fuzzing on the target is complete.'  ``` 
 
 ### GET parameter fuzzing
 
