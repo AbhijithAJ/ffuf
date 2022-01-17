@@ -78,7 +78,7 @@ Assuming that the default virtualhost response size is 4242 bytes, we can filter
 ffuf -w /path/to/vhost/wordlist -u https://target -H "Host: FUZZ" -fs 4242
 ```
 
-#####TIP 
+##### TIP 
 When you are using long word list, you can get an intimation to your telegram mobile application once the fuzzing is done using the python [intimations](https://github.com/AbhijithAJ/intimations) module.
 
 ```
